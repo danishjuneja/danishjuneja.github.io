@@ -1,309 +1,95 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Danish Juneja</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #ff6b6b 0%, #4ecdc4 50%, #45b7d1 100%);
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 2rem;
-        }
-
-        .hero {
-            text-align: center;
-            padding: 4rem 0;
-            color: white;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .hero .tagline {
-            font-size: 1.3rem;
-            opacity: 0.9;
-            margin-bottom: 2rem;
-            animation: fadeInUp 1s ease-out 0.2s both;
-        }
-
-        .cards-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 2.5rem;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-            animation: fadeInUp 1s ease-out 0.4s both;
-        }
-
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0,0,0,0.15);
-        }
-
-        .card-icon {
-            width: 60px;
-            height: 60px;
-            margin: 0 auto 1.5rem;
-            background: linear-gradient(135deg, #ff6b6b, #45b7d1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            color: white;
-            border: 3px solid rgba(255,255,255,0.3);
-            box-shadow: 0 10px 30px rgba(255,107,107,0.3);
-        }
-
-        .card h2 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
-            color: #2d3748;
-            text-align: center;
-        }
-
-        .card p {
-            color: #4a5568;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
-
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-            justify-content: center;
-            margin-top: 1.5rem;
-        }
-
-        .skill-tag {
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-            color: white;
-            padding: 0.4rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            font-weight: 500;
-            box-shadow: 0 5px 15px rgba(255,107,107,0.2);
-        }
-
-        .contact-section {
-            text-align: center;
-            margin-top: 4rem;
-            padding: 3rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            backdrop-filter: blur(10px);
-            animation: fadeInUp 1s ease-out 0.6s both;
-        }
-
-        .contact-section h2 {
-            color: white;
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .email-link {
-            color: white;
-            font-size: 1.2rem;
-            text-decoration: none;
-            padding: 1rem 2rem;
-            background: rgba(255, 255, 255, 0.2);
-            border-radius: 50px;
-            display: inline-block;
-            margin-top: 1rem;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-        }
-
-        .email-link:hover {
-            background: rgba(255, 255, 255, 0.3);
-            transform: translateY(-2px);
-        }
-
-        .floating-elements {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
-        }
-
-        .floating-element {
-            position: absolute;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
-        }
-
-        .floating-element:nth-child(1) {
-            width: 80px;
-            height: 80px;
-            top: 20%;
-            left: 10%;
-            animation-delay: 0s;
-        }
-
-        .floating-element:nth-child(2) {
-            width: 60px;
-            height: 60px;
-            top: 60%;
-            right: 15%;
-            animation-delay: 2s;
-        }
-
-        .floating-element:nth-child(3) {
-            width: 40px;
-            height: 40px;
-            top: 80%;
-            left: 20%;
-            animation-delay: 4s;
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px);
-            }
-            50% {
-                transform: translateY(-20px);
-            }
-        }
-
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .cards-container {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-            
-            .card {
-                padding: 2rem;
-            }
-            
-            .container {
-                padding: 1rem;
-            }
-        }
-    </style>
+    <title>DANISH - Official Site</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="floating-elements">
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
-        <div class="floating-element"></div>
+        <div class="float-item float-1"></div>
+        <div class="float-item float-2"></div>
+        <div class="float-item float-3"></div>
+        <div class="float-item float-4"></div>
     </div>
 
-    <div class="container">
+    <div class="main-content">
         <section class="hero">
-            <h1>Danish Juneja</h1>
-            <p class="tagline">Software Developer & Musician</p>
+            <h1>DANISH</h1>
+            <div class="subtitle">Official site of DANISH (artist)</div>
+            <div class="tagline">Software Developer & Musician</div>
+            
+            <div class="social-section">
+                <div class="social-buttons">
+                    <button class="social-btn instagram-btn" data-reveal="instagram">
+                        <span class="btn-icon">📸</span>
+                        <span class="btn-text">Instagram</span>
+                    </button>
+                    <button class="social-btn email-btn" data-reveal="email">
+                        <span class="btn-icon">✉️</span>
+                        <span class="btn-text">Email</span>
+                    </button>
+                </div>
+                
+                <div class="social-reveals">
+                    <div class="social-reveal" id="instagram-reveal">
+                        <a href="https://www.instagram.com/kyaboladanish" target="_blank" class="social-link instagram-link">
+                            @kyaboladanish
+                        </a>
+                    </div>
+                    <div class="social-reveal" id="email-reveal">
+                        <a href="mailto:danishjuneja11@gmail.com" class="social-link email-link">
+                            danishjuneja11@gmail.com
+                        </a>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <div class="cards-container">
-            <div class="card">
-                <div class="card-icon">⚡</div>
-                <h2>Software Developer</h2>
-                <p>Building innovative solutions at Oracle NetSuite, where I develop enterprise software that helps businesses streamline their operations and grow efficiently.</p>
-                <div class="skills">
-                    <span class="skill-tag">Enterprise Software</span>
-                    <span class="skill-tag">Cloud Solutions</span>
-                    <span class="skill-tag">Full-Stack Development</span>
+        <div class="work-section">
+            <div class="work-item">
+                <div class="work-content">
+                    <div class="work-icon">⚡</div>
+                    <h2 class="work-title">Software Developer</h2>
+                    <p class="work-description">
+                        Building innovative solutions at Oracle NetSuite, developing enterprise software that empowers businesses worldwide to optimize their operations and accelerate growth.
+                    </p>
+                    <div class="skills-flow">
+                        <span class="skill">Enterprise Architecture</span>
+                        <span class="skill">Cloud Solutions</span>
+                        <span class="skill">Full-Stack Development</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="card">
-                <div class="card-icon">🎤</div>
-                <h2>Singer & Songwriter</h2>
-                <p>Creating original music and performing with passion. I write songs that tell stories and connect with people through melody and emotion.</p>
-                <div class="skills">
-                    <span class="skill-tag">Original Compositions</span>
-                    <span class="skill-tag">Live Performance</span>
-                    <span class="skill-tag">Music Production</span>
+            <div class="work-item">
+                <div class="work-content">
+                    <div class="work-icon">🎤</div>
+                    <h2 class="work-title">Singer & Songwriter</h2>
+                    <p class="work-description">
+                        Crafting original music that resonates with the soul. From intimate acoustic pieces to full arrangements, bringing stories to life through melody and verse.
+                    </p>
+                    <div class="skills-flow">
+                        <span class="skill">Original Compositions</span>
+                        <span class="skill">Live Performance</span>
+                        <span class="skill">Music Production</span>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <section class="contact-section">
-            <h2>Let's Connect</h2>
-            <p style="color: rgba(255,255,255,0.9); margin-bottom: 1rem;">
-                Whether you want to discuss technology, collaborate on music, or just say hello
+        <section class="contact-area">
+            <h2 class="contact-title">Let's Connect</h2>
+            <p class="contact-text">
+                Ready to collaborate on your next project?
             </p>
-            <a href="mailto:danishjuneja11@gmail.com" class="email-link">
-                danishjuneja11@gmail.com
+            <a href="mailto:danishjuneja@email.com" class="email-button">
+                danishjuneja@email.com
             </a>
         </section>
     </div>
 
-    <script>
-        // Add some interactive hover effects
-        const cards = document.querySelectorAll('.card');
-        
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-10px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Parallax effect for floating elements
-        document.addEventListener('mousemove', (e) => {
-            const elements = document.querySelectorAll('.floating-element');
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            
-            elements.forEach((element, index) => {
-                const speed = (index + 1) * 0.5;
-                element.style.transform = `translate(${x * speed * 10}px, ${y * speed * 10}px)`;
-            });
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
