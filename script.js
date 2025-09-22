@@ -27,6 +27,12 @@ socialButtons.forEach(button => {
 const observeElements = () => {
     const workItems = document.querySelectorAll('.work-item');
     
+    // Make work items visible immediately
+    workItems.forEach(item => {
+        item.style.opacity = '1';
+        item.style.transform = 'translateY(0)';
+    });
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
