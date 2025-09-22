@@ -85,12 +85,29 @@ body {
     font-size: 0.8rem;
     font-weight: 400;
     font-family: 'Courier New', Courier, monospace;
+    position: relative;
 }
 
 .social-btn:hover {
     background: #30363d;
     border-color: #7c3aed;
     color: #7c3aed;
+}
+
+.social-btn:hover .btn-text::after {
+    content: attr(data-hover);
+    position: absolute;
+    bottom: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #21262d;
+    color: #7c3aed;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    border: 1px solid #30363d;
+    white-space: nowrap;
+    z-index: 100;
 }
 
 .social-btn.active {
