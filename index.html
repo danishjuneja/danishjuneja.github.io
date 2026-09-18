@@ -1,85 +1,219 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DANISH - Official Site</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <div class="floating-elements">
-        <div class="float-item float-1"></div>
-        <div class="float-item float-2"></div>
-        <div class="float-item float-3"></div>
-        <div class="float-item float-4"></div>
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Danish Juneja writes software and songs."
+    />
+    <title>Danish Juneja | Software Developer &amp; Musician</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <div class="main-content">
-        <section class="hero">
-            <h1>DANISH</h1>
-            <div class="subtitle">Official site of DANISH</div>
-            <div class="tagline">Software Developer & Musician</div>
-            
-            <div class="social-section">
-                <div class="social-buttons">
-                    <button class="social-btn instagram-btn" data-reveal="instagram">
-                        <span class="btn-icon">📸</span>
-                        <span class="btn-text" data-hover="@kyaboladanish">Instagram</span>
-                    </button>
-                    <button class="social-btn email-btn" data-reveal="email">
-                        <span class="btn-icon">✉️</span>
-                        <span class="btn-text" data-hover="danishjuneja11@gmail.com">Email</span>
-                    </button>
-                </div>
-                
-                <div class="social-reveals">
-                    <div class="social-reveal" id="instagram-reveal">
-                        <a href="https://www.instagram.com/kyaboladanish" target="_blank" class="social-link instagram-link">
-                            @kyaboladanish
-                        </a>
-                    </div>
-                    <div class="social-reveal" id="email-reveal">
-                        <a href="mailto:danishjuneja11@gmail.com" class="social-link email-link">
-                            danishjuneja11@gmail.com
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <div class="work-section">
-            <div class="work-item">
-                <div class="work-content">
-                    <div class="work-icon">⚡</div>
-                    <h2 class="work-title">Software Developer</h2>
-                    <p class="work-description">
-                        Building innovative solutions at Oracle NetSuite, developing enterprise software that empowers businesses worldwide to optimize their operations and accelerate growth.
-                    </p>
-                    <div class="skills-flow">
-                        <span class="skill">Enterprise Architecture</span>
-                        <span class="skill">Cloud Solutions</span>
-                        <span class="skill">Full-Stack Development</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="work-item">
-                <div class="work-content">
-                    <div class="work-icon">🎤</div>
-                    <h2 class="work-title">Singer & Songwriter</h2>
-                    <p class="work-description">
-                        Crafting original music that resonates with the soul. From intimate acoustic pieces to full arrangements, bringing stories to life through melody and verse.
-                    </p>
-                    <div class="skills-flow">
-                        <span class="skill">Original Compositions</span>
-                        <span class="skill">Live Performance</span>
-                        <span class="skill">Music Production</span>
-                    </div>
-                </div>
-            </div>
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Primary navigation">
+        <a class="wordmark" href="#top" aria-label="Danish Juneja, home">DJ<span>.</span></a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#experience">Experience</a>
+          <a href="#work">Work</a>
+          <a href="#music">Music</a>
         </div>
-    </div>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section class="hero shell" id="top" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Software Developer &amp; Musician</p>
+          <h1 id="hero-title">Danish Juneja</h1>
+          <p class="hero-line">
+            Just trying to find what twitches the most in that tiny brain of mine.
+          </p>
+          <div class="hero-links" aria-label="Profile links">
+            <a href="mailto:danishjuneja11@gmail.com">Email</a>
+            <a href="https://github.com/danishjuneja" target="_blank" rel="noreferrer">GitHub</a>
+            <a href="https://www.linkedin.com/in/danishjuneja" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+
+        <img
+          class="portrait"
+          src="assets/danish-juneja.jpeg"
+          alt="Danish Juneja smiling at the Global Tech Summit"
+        />
+      </section>
+
+      <section class="section shell" id="about" aria-labelledby="about-title">
+        <div class="section-label"><span>01</span><h2 id="about-title">About</h2></div>
+        <div class="section-body prose">
+          <p>
+            Hi, I'm Danish. I build software at Oracle NetSuite. Most of my work starts with me
+            poking at a problem until I find the weird edge case or a shortcut nobody has tried yet.
+          </p>
+          <p>
+            I also write and sing songs. There's usually a tune looping in my head, and putting it
+            out into the world is the only reliable way to make room for the next one. I'm looking
+            for my next software role.
+          </p>
+        </div>
+      </section>
+
+      <section class="section shell" id="experience" aria-labelledby="experience-title">
+        <div class="section-label"><span>02</span><h2 id="experience-title">Experience</h2></div>
+        <div class="section-body timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <time>Jul 2024 &ndash; Oct 2026</time>
+              <p>Oracle India Pvt. Ltd.</p>
+            </div>
+            <div class="timeline-content">
+              <h3>Application Software Developer 1</h3>
+              <ul class="bullet-list">
+                <li>I designed the schema, data model, and REST API for CFO Insights. It handles role-based access and imports two years of payroll data for roughly 2,500-3,000 SuitePeople customers.</li>
+                <li>I reworked the reporting system to support AI-written summaries in NetSuite and NetSuite Next, then built end-to-end checks with Playwright and LEAF.</li>
+                <li>I fixed more than 30 production bugs across Java and SQL/PLSQL. One was a data corruption issue with over $500K at stake, which I traced and resolved within 24 hours.</li>
+                <li>I built approval routing and setup flows for the Intelligent Payment Automation SuiteApp from scratch.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <time>Apr 2023 &ndash; Apr 2024</time>
+              <p>IRIS, NITK</p>
+            </div>
+            <div class="timeline-content">
+              <h3>Admin Lead</h3>
+              <ul class="bullet-list">
+                <li>I led 40+ students building NITK's campus ERP. It serves 24K+ users and covers 55+ functions, including course registration, hostel allotment, and mess allocation.</li>
+                <li>I also led the research, postgraduate tracking, and service-request modules. Together, they cover 500+ projects and more than 15 workflows.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <time>May 2023 &ndash; Jul 2023</time>
+              <p>Oracle India Pvt. Ltd.</p>
+            </div>
+            <div class="timeline-content">
+              <h3>Software Development Intern</h3>
+              <ul class="bullet-list">
+                <li>I built a React and SuiteScript tool to map transaction flow and flag orphaned nodes in NetSuite's SCM and revenue-recognition modules.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <time>Jan 2022 &ndash; Apr 2023</time>
+              <p>IRIS, NITK</p>
+            </div>
+            <div class="timeline-content">
+              <h3>Product Manager</h3>
+              <p>I planned and shipped campus software with the IRIS team.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell" id="education" aria-labelledby="education-title">
+        <div class="section-label"><span>03</span><h2 id="education-title">Education</h2></div>
+        <div class="section-body timeline">
+          <article class="timeline-item">
+            <div class="timeline-meta">
+              <time>2020 &ndash; 2024</time>
+              <p>Surathkal, India</p>
+            </div>
+            <div class="timeline-content">
+              <h3>National Institute of Technology Karnataka</h3>
+              <p>B.Tech. in Electronics and Communication Engineering, with a minor in Management. CGPA: 8.23.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell" id="work" aria-labelledby="work-title">
+        <div class="section-label"><span>04</span><h2 id="work-title">Selected Work</h2></div>
+        <div class="section-body work-grid">
+          <article class="work-card work-card-empty">
+            <p class="eyebrow">Still writing</p>
+            <h3>The polished project write-ups are still in the works.</h3>
+            <p>
+              The rest are already on
+              <a href="https://github.com/danishjuneja" target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section shell" id="skills" aria-labelledby="skills-title">
+        <div class="section-label"><span>05</span><h2 id="skills-title">Skills</h2></div>
+        <div class="section-body skills-list">
+          <div>
+            <h3>Languages</h3>
+            <p>Java / C++ / Python / JavaScript / TypeScript / C / SQL / PL/SQL</p>
+          </div>
+          <div>
+            <h3>Backend &amp; Data</h3>
+            <p>REST APIs / PostgreSQL / Oracle Database / Elasticsearch</p>
+          </div>
+          <div>
+            <h3>Testing &amp; Automation</h3>
+            <p>Playwright / JUnit / Mockito</p>
+          </div>
+          <div>
+            <h3>AI &amp; ML</h3>
+            <p>TensorFlow / LLM Agents / LLM Evaluation</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section shell" id="music" aria-labelledby="music-title">
+        <div class="section-label"><span>06</span><h2 id="music-title">Music</h2></div>
+        <div class="section-body music-block">
+          <div class="prose">
+            <p>
+              I've been learning music since I was five, although "learning music" has meant several
+              different things. I started with keyboard and vocal training, then picked up guitar
+              and even tried the mandolin. I'm still not sure which one has me for good.
+            </p>
+            <p>
+              Mostly, I write and sing songs. A friend and I once spent 31 straight hours turning a
+              free weekend into a three-song EP. It seemed reasonable at the time.
+            </p>
+          </div>
+          <a
+            class="arrow-link"
+            href="https://open.spotify.com/artist/4JJYKGbv1hS67HHFfC7YXE"
+            target="_blank"
+            rel="noreferrer"
+          >Listen on Spotify <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+
+      <section class="contact shell" aria-labelledby="contact-title">
+        <p class="eyebrow">Want to work together?</p>
+        <h2 id="contact-title">Drop me a line.</h2>
+        <a class="contact-link" href="mailto:danishjuneja11@gmail.com">danishjuneja11@gmail.com</a>
+      </section>
+    </main>
+
+    <footer class="footer shell">
+      <p>© <span id="year"></span> Danish Juneja</p>
+      <a href="#top">Back to top ↑</a>
+    </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
