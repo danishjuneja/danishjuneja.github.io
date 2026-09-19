@@ -297,6 +297,61 @@ h1 {
   color: var(--ink);
 }
 
+.content-page {
+  padding-block: 88px 100px;
+}
+
+.content-page h1 {
+  max-width: 700px;
+  margin-bottom: 22px;
+}
+
+.content-prose {
+  max-width: 680px;
+  margin-top: 48px;
+}
+
+.listing-grid {
+  display: grid;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.listing-grid .work-card {
+  display: block;
+  text-decoration: none;
+}
+
+.listing-grid .work-card:hover,
+.listing-grid .work-card:focus-visible {
+  border-color: var(--accent);
+}
+
+.listing-grid .work-card h2 {
+  margin-bottom: 8px;
+  font-size: 20px;
+  line-height: 1.35;
+}
+
+.listing-grid .work-card p:last-child {
+  margin-bottom: 0;
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 28px;
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.tag-list span {
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+}
+
 .skills-list {
   display: grid;
   gap: 24px;
@@ -394,6 +449,10 @@ h1 {
 
   .contact {
     padding-block: 64px;
+  }
+
+  .content-page {
+    padding-block: 64px 72px;
   }
 }
 

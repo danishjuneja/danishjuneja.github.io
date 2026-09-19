@@ -1,0 +1,28 @@
+title: "Danish Juneja | Software Developer & Musician"
+description: "Portfolio of Danish Juneja, a software developer and musician with experience at Oracle NetSuite and IRIS NITK, currently open to software roles."
+url: "https://danishjuneja.github.io"
+baseurl: ""
+lang: en-IN
+timezone: Asia/Kolkata
+permalink: /writing/:title/
+markdown: kramdown
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - README.md

@@ -1,0 +1,85 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {% assign page_title = page.title | default: site.title %}
+  {% assign page_description = page.description | default: site.description %}
+  {% assign page_url = page.url | absolute_url %}
+  {% assign page_image = page.image | default: '/assets/og-image.png' | absolute_url %}
+  <meta name="description" content="{{ page_description | escape }}" />
+  <title>{{ page_title | escape }}</title>
+  <link rel="canonical" href="{{ page_url }}" />
+
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}" />
+  <meta property="og:url" content="{{ page_url }}" />
+  <meta property="og:title" content="{{ page_title | escape }}" />
+  <meta property="og:description" content="{{ page_description | escape }}" />
+  <meta property="og:image" content="{{ page_image }}" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Danish Juneja, software developer and musician" />
+  <meta property="og:site_name" content="Danish Juneja" />
+  <meta property="og:locale" content="en_IN" />
+  {% if page.layout == 'post' and page.date %}<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}" />{% endif %}
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{{ page_title | escape }}" />
+  <meta name="twitter:description" content="{{ page_description | escape }}" />
+  <meta name="twitter:image" content="{{ page_image }}" />
+  <meta name="twitter:image:alt" content="Danish Juneja, software developer and musician" />
+
+  {% if page.layout == 'post' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": {{ page.title | jsonify }},
+      "description": {{ page_description | jsonify }},
+      "url": "{{ page_url }}",
+      "datePublished": "{{ page.date | date_to_xmlschema }}",
+      "author": { "@type": "Person", "name": "Danish Juneja", "url": "{{ site.url }}/" }
+    }
+  </script>
+  {% elsif page.layout == 'project' %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CreativeWork",
+      "name": {{ page.title | jsonify }},
+      "description": {{ page_description | jsonify }},
+      "url": "{{ page_url }}",
+      "author": { "@type": "Person", "name": "Danish Juneja", "url": "{{ site.url }}/" }
+    }
+  </script>
+  {% else %}
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "@id": "{{ page_url }}#profile",
+      "url": "{{ page_url }}",
+      "name": {{ page_title | jsonify }},
+      "description": {{ page_description | jsonify }},
+      "mainEntity": {
+        "@type": "Person",
+        "@id": "{{ site.url }}/#person",
+        "name": "Danish Juneja",
+        "url": "{{ site.url }}/",
+        "image": "{{ '/assets/danish-juneja.jpeg' | absolute_url }}",
+        "jobTitle": "Software Developer and Musician",
+        "email": "mailto:danishjuneja11@gmail.com",
+        "sameAs": [
+          "https://github.com/danishjuneja",
+          "https://www.linkedin.com/in/danishjuneja",
+          "https://open.spotify.com/artist/4JJYKGbv1hS67HHFfC7YXE"
+        ],
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "National Institute of Technology Karnataka", "url": "https://www.nitk.ac.in/" },
+        "knowsAbout": ["Java", "C++", "Python", "JavaScript", "TypeScript", "REST APIs", "PostgreSQL", "Oracle Database", "Elasticsearch", "Playwright", "TensorFlow", "LLM Agents", "LLM Evaluation"]
+      }
+    }
+  </script>
+  {% endif %}
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ '/styles.css' | relative_url }}" />
+</head>
