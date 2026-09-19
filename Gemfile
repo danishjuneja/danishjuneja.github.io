@@ -11,3 +11,4 @@ gem "ostruct"
 gem "rexml"
 gem "cgi"
 gem "webrick"
+gem "tzinfo-data", platforms: %i[mingw mswin x64_mingw]
