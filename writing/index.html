@@ -1,0 +1,22 @@
+---
+layout: default
+title: "Writing | Danish Juneja"
+description: "Notes and articles by Danish Juneja about software, systems and building things."
+permalink: /writing/
+---
+<section class="content-page shell">
+  <p class="eyebrow">Notes &amp; articles</p>
+  <h1>Writing</h1>
+  <p class="hero-line">Things I've learned, built or kept thinking about long enough to write down.</p>
+  <div class="listing-grid">
+    {% for post in site.posts %}
+    <a class="work-card" href="{{ post.url | relative_url }}">
+      <p class="eyebrow">{{ post.date | date: "%d %b %Y" }}</p>
+      <h2>{{ post.title }}</h2>
+      {% if post.description %}<p>{{ post.description }}</p>{% endif %}
+    </a>
+    {% else %}
+    <article class="work-card"><p class="eyebrow">Coming soon</p><h2>Writing is on the way.</h2><p>New notes will appear here as Markdown files are added to the repository.</p></article>
+    {% endfor %}
+  </div>
+</section>

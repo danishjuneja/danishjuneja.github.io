@@ -1,7 +1,14 @@
+---
+layout: null
+---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://danishjuneja.github.io/</loc>
-    <lastmod>2026-09-19</lastmod>
-  </url>
+  {% assign pages = site.pages | where_exp: "item", "item.sitemap != false" %}
+  {% for item in pages %}
+  {% if item.url == '/' or item.url contains '/projects/' or item.url contains '/writing/' %}
+  <url><loc>{{ item.url | absolute_url }}</loc></url>
+  {% endif %}
+  {% endfor %}
+  {% for item in site.projects %}<url><loc>{{ item.url | absolute_url }}</loc></url>{% endfor %}
+  {% for item in site.posts %}<url><loc>{{ item.url | absolute_url }}</loc>{% if item.last_modified_at %}<lastmod>{{ item.last_modified_at | date_to_xmlschema }}</lastmod>{% elsif item.date %}<lastmod>{{ item.date | date_to_xmlschema }}</lastmod>{% endif %}</url>{% endfor %}
 </urlset>

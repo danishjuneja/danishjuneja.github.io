@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="content-page shell">
+  <p class="eyebrow">Project{% if page.featured %} · Featured{% endif %}</p>
+  <h1>{{ page.title }}</h1>
+  {% if page.summary %}<p class="hero-line">{{ page.summary }}</p>{% endif %}
+  {% if page.technologies %}<p class="tag-list">{% for technology in page.technologies %}<span>{{ technology }}</span>{% endfor %}</p>{% endif %}
+  <div class="prose content-prose">{{ content }}</div>
+  <div class="hero-links">
+    {% if page.github %}<a href="{{ page.github }}" target="_blank" rel="noreferrer">GitHub ↗</a>{% endif %}
+    {% if page.demo %}<a href="{{ page.demo }}" target="_blank" rel="noreferrer">Live demo ↗</a>{% endif %}
+  </div>
+</article>

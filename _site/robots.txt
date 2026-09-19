@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://danishjuneja.github.io/sitemap.xml

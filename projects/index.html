@@ -1,0 +1,23 @@
+---
+layout: default
+title: "Projects | Danish Juneja"
+description: "Selected software projects by Danish Juneja."
+permalink: /projects/
+---
+<section class="content-page shell">
+  <p class="eyebrow">Selected work</p>
+  <h1>Projects</h1>
+  <p class="hero-line">A growing collection of things I've built, shipped and learned from.</p>
+  <div class="listing-grid">
+    {% assign projects = site.projects | sort: "order" %}
+    {% for project in projects %}
+    <a class="work-card" href="{{ project.url | relative_url }}">
+      <p class="eyebrow">{% if project.technologies %}{{ project.technologies | join: " / " }}{% else %}Project{% endif %}</p>
+      <h2>{{ project.title }}</h2>
+      {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+    </a>
+    {% else %}
+    <article class="work-card"><p class="eyebrow">Coming soon</p><h2>Showcase projects are coming soon.</h2><p>In the meantime, you can view the rest of them on <a href="https://github.com/danishjuneja">GitHub ↗</a>.</p></article>
+    {% endfor %}
+  </div>
+</section>
