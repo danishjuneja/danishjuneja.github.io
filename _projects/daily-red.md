@@ -10,6 +10,7 @@ order: 1
 tags: [pokemon, webassembly, performance, side-projects]
 image: /assets/posts/daily-red/pikachu-haunter.png
 image_alt: "Haunter facing Pikachu in a Daily Red battle"
+showcase_crop: battle
 ---
 
 ![Daily Red start screen asking whether you solved today's Wordle](/assets/posts/daily-red/daily-red-start.png)

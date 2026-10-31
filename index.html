@@ -140,12 +140,27 @@ NITK, currently open to software roles."
         <h2 id="work-title">Selected Work</h2>
     </div>
     <div class="section-body work-grid">
+        {% assign featured_projects = site.projects | where: "featured", true | sort: "order" %}
+        {% for project in featured_projects %}
+        <article class="work-card">
+            {% if project.image %}
+            <a href="{{ project.url | relative_url }}">
+                <div class="showcase-thumbnail{% if project.showcase_crop == 'battle' %} showcase-thumbnail--battle{% endif %}">
+                    <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title | escape }}" loading="lazy" />
+                </div>
+            </a>
+            {% endif %}
+            <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+            {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+        </article>
+        {% else %}
         <article class="work-card work-card-empty">
             <p class="eyebrow">Still writing</p>
             <h3>Showcase projects are coming soon.</h3>
             <p>In the meantime, you can view the rest of them on <a href="https://github.com/danishjuneja"
                     target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>.</p>
         </article>
+        {% endfor %}
     </div>
 </section>
 
