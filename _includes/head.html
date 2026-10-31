@@ -14,7 +14,8 @@
   <meta property="og:title" content="{{ page_title | escape }}" />
   <meta property="og:description" content="{{ page_description | escape }}" />
   <meta property="og:image" content="{{ page_image }}" />
-  <meta property="og:image:type" content="image/png" />
+  {% assign image_ext = page_image | split: "." | last | downcase %}
+  <meta property="og:image:type" content="{% if image_ext == "jpg" or image_ext == "jpeg" %}image/jpeg{% else %}image/png{% endif %}" />
   <meta property="og:image:alt" content="{{ page.image_alt | default: 'Danish Juneja, software developer and musician' | escape }}" />
   <meta property="og:site_name" content="Danish Juneja" />
   <meta property="og:locale" content="en_IN" />

@@ -6,7 +6,7 @@ summary: "How Daily Red grew beyond a few Twitter visitors, and how I cut its do
 technologies: [WebAssembly, JavaScript, Docker, GitHub Actions, Vercel]
 github: "https://github.com/danishjuneja/dailyred-improved"
 featured: true
-order: 1
+order: 2
 tags: [pokemon, webassembly, performance, side-projects]
 image: /assets/posts/daily-red/battle-thumbnail.png
 image_alt: "Haunter facing Pikachu in a Daily Red battle"

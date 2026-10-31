@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900">
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 Z" fill="#48536a"/></marker></defs>
+<rect width="1200" height="900" fill="#fafbff"/>
+<g font-family="Segoe UI, Arial, sans-serif" fill="#172238">
+<text x="50" y="66" font-size="31" font-weight="700">How OMP builds and checks its map</text>
+<text x="50" y="101" font-size="17" fill="#536078">From source files to evidence an agent can inspect</text>
+<text x="50" y="625" font-size="20" font-weight="700">Freshness choices: different guarantees, different costs</text>
+<rect x="50" y="155" width="315" height="160" rx="18" fill="#e9f2ff" stroke="#a5b1c2" stroke-width="1.5"/>
+<text x="70" y="190" font-size="17" font-weight="700">1  INVENTORY</text>
+<text x="70" y="227" font-size="15">Git working tree</text>
+<text x="70" y="254" font-size="15">Tracked + eligible untracked files</text>
+<text x="70" y="281" font-size="15">Filter unsafe / unsupported files</text>
+<rect x="440" y="155" width="315" height="160" rx="18" fill="#f2ecff" stroke="#a5b1c2" stroke-width="1.5"/>
+<text x="460" y="190" font-size="17" font-weight="700">2  LANGUAGE ANALYSIS</text>
+<text x="460" y="227" font-size="15">Go AST + local type information</text>
+<text x="460" y="254" font-size="15">Optional Tree-sitter: Python / TS</text>
+<text x="460" y="281" font-size="15">Other languages: text-only</text>
+<rect x="830" y="155" width="315" height="160" rx="18" fill="#fff1da" stroke="#a5b1c2" stroke-width="1.5"/>
+<text x="850" y="190" font-size="17" font-weight="700">3  CHUNK SOURCE</text>
+<text x="850" y="227" font-size="15">Declaration boundaries where known</text>
+<text x="850" y="254" font-size="15">Split at 80 lines or 16 KiB</text>
+<text x="850" y="281" font-size="15">Keep path, lines, hash and symbol</text>
+<rect x="50" y="405" width="315" height="160" rx="18" fill="#e4f6ee" stroke="#a5b1c2" stroke-width="1.5"/>
+<text x="70" y="440" font-size="17" font-weight="700">4  LOCAL INDEX</text>
+<text x="70" y="477" font-size="15">SQLite + FTS5 text search</text>
+<text x="70" y="504" font-size="15">Chunks + indexed graph edges</text>
+<text x="70" y="531" font-size="15">Notes with evidence dependencies</text>
+<rect x="440" y="405" width="315" height="160" rx="18" fill="#ffe9e9" stroke="#a5b1c2" stroke-width="1.5"/>
+<text x="460" y="440" font-size="17" font-weight="700">5  INVESTIGATE</text>
+<text x="460" y="477" font-size="15">Rank lexical leads and notes</text>
+<text x="460" y="504" font-size="15">Expand up to two graph hops</text>
+<text x="460" y="531" font-size="15">Return compact, source-backed leads</text>
+<rect x="830" y="405" width="315" height="160" rx="18" fill="#e5f4fa" stroke="#a5b1c2" stroke-width="1.5"/>
+<text x="850" y="440" font-size="17" font-weight="700">6  AGENT</text>
+<text x="850" y="477" font-size="15">Read source and verify claims</text>
+<text x="850" y="504" font-size="15">Treat candidate edges as hints</text>
+<text x="850" y="531" font-size="15">Save findings or search further</text>
+<rect x="50" y="655" width="315" height="175" rx="18" fill="#f4f5f7" stroke="#a5b1c2" stroke-width="1.5"/>
+<text x="70" y="690" font-size="17" font-weight="700">FULL AUDIT  ·  DEFAULT</text>
+<text x="70" y="727" font-size="15">Inventory + content hashes</text>
+<text x="70" y="754" font-size="15">Detect additions and changed files</text>
+<text x="70" y="781" font-size="15">Strongest current freshness check</text>
+<rect x="440" y="655" width="315" height="175" rx="18" fill="#f4f5f7" stroke="#a5b1c2" stroke-width="1.5"/>
+<text x="460" y="690" font-size="17" font-weight="700">FAST AUDIT  ·  OPT-IN</text>
+<text x="460" y="727" font-size="15">Inventory + size, mtime, mode</text>
+<text x="460" y="754" font-size="15">May miss preserved metadata</text>
+<text x="460" y="781" font-size="15">Returned evidence content-checked</text>
+<rect x="830" y="655" width="315" height="175" rx="18" fill="#f4f5f7" stroke="#a5b1c2" stroke-width="1.5"/>
+<text x="850" y="690" font-size="17" font-weight="700">SESSION  ·  SNAPSHOT</text>
+<text x="850" y="727" font-size="15">Audit once; refresh explicitly</text>
+<text x="850" y="754" font-size="15">Generation + evidence checked</text>
+<text x="850" y="781" font-size="15">Later worktree changes may be missed</text>
+<line x1="365" y1="235" x2="440" y2="235" stroke="#48536a" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="755" y1="235" x2="830" y2="235" stroke="#48536a" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="990" y1="315" x2="990" y2="355" stroke="#48536a" stroke-width="2.5"/>
+<line x1="990" y1="355" x2="205" y2="355" stroke="#48536a" stroke-width="2.5"/>
+<line x1="205" y1="355" x2="205" y2="405" stroke="#48536a" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="365" y1="485" x2="440" y2="485" stroke="#48536a" stroke-width="2.5" marker-end="url(#arrow)"/>
+<line x1="755" y1="485" x2="830" y2="485" stroke="#48536a" stroke-width="2.5" marker-end="url(#arrow)"/>
+<text x="50" y="870" font-size="14" fill="#536078">All paths require source verification. Candidate edges and partial results are explicitly labelled.</text>
+</g></svg>
