@@ -5,7 +5,7 @@
   --muted: #68665f;
   --line: #cfcbc0;
   --accent: #d7522b;
-  --shell: 820px;
+  --shell: 1000px;
 }
 
 * {
@@ -504,3 +504,54 @@ h1 {
     scroll-behavior: auto;
   }
 }
+
+/* A compact, independently scrollable project shelf. */
+#work .section-body { min-width: 0; }
+.work-hint {
+  margin: 0 0 12px;
+  color: var(--muted);
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.work-hint span { color: var(--accent); }
+
+.work-grid {
+  display: grid;
+  min-width: 0;
+  max-width: 100%;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(260px, 320px);
+  gap: 16px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: none;
+}
+
+.work-grid::-webkit-scrollbar { display: none; }
+
+.work-grid:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.work-grid .work-card { scroll-snap-align: start; }
+.work-grid .showcase-thumbnail { width: 100%; max-width: none; aspect-ratio: 3 / 2; object-fit: cover; }
+
+@media (max-width: 720px) {
+  .work-grid { grid-auto-columns: min(82vw, 320px); }
+}
+
+/* Group roles by organization, with the full descriptions beneath each heading. */
+.experience-groups {
+  display: grid;
+  gap: 40px;
+}
+
+.experience-group > h3 {
+  margin: 0 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  font-size: 20px;
+  letter-spacing: -0.03em;
+}
+
+.experience-role + .experience-role { margin-top: 30px; }
+.experience-role .timeline-meta { margin-bottom: 4px; }

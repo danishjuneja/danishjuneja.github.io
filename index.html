@@ -21,22 +21,48 @@ NITK, currently open to software roles."
         <h2 id="about-title">About</h2>
     </div>
     <div class="section-body prose">
-        <p>Hi, I'm Danish. I build software at Oracle NetSuite. Most of my work starts with me poking at a problem until
-            I find the weird edge case or a shortcut nobody has tried yet. I'm looking for my next software role.</p>
-        <p>I also write and sing songs. There's usually a tune looping in my head, and putting it out into the world is
-            the only reliable way to make room for the next one.</p>
+        <p>Hi, I'm Danish, I used to build software at Oracle NetSuite, now I'm looking for my next role. Most of the times I'm building things because they come in my dreams, even the smallest things like optimising a SQL query.</p>
+        <p>I also write and sing songs. There's usually a song looping in my head, and putting it out into the world is the only reliable way to make room for the next one.</p>
+    </div>
+</section>
+
+<section class="section shell" id="work" aria-labelledby="work-title">
+    <div class="section-label"><span>02</span>
+        <h2 id="work-title">Selected Work</h2>
+    </div>
+    <div class="section-body">
+        <p class="work-hint">Scroll to explore <span aria-hidden="true">&rarr;</span></p>
+        <div class="work-grid" tabindex="0" role="region" aria-label="Selected projects, scroll horizontally">
+        {% assign featured_projects = site.projects | where: "featured", true | sort: "order" %}
+        {% for project in featured_projects %}
+        <article class="work-card">
+            {% if project.image %}
+            <a href="{{ project.url | relative_url }}">
+                <img class="showcase-thumbnail" src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title | escape }}" width="280" height="186" loading="lazy" />
+            </a>
+            {% endif %}
+            <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
+            {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+        </article>
+        {% else %}
+        <article class="work-card work-card-empty">
+            <p class="eyebrow">Still writing</p>
+            <h3>Showcase projects are coming soon.</h3>
+            <p>In the meantime, you can view the rest of them on <a href="https://github.com/danishjuneja"
+                    target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>.</p>
+        </article>
+        {% endfor %}
+        </div>
     </div>
 </section>
 
 <section class="section shell" id="experience" aria-labelledby="experience-title">
-    <div class="section-label"><span>02</span>
-        <h2 id="experience-title">Experience</h2>
-    </div>
-    <div class="section-body timeline">
-        <article class="timeline-item">
-            <div class="timeline-meta"><time>Jul 2024 – Oct 2026</time>
-                <p>Oracle India Pvt. Ltd.</p>
-            </div>
+    <div class="section-label"><span>03</span><h2 id="experience-title">Experience</h2></div>
+    <div class="section-body experience-groups">
+        <section class="experience-group" aria-labelledby="oracle-title">
+            <h3 id="oracle-title">Oracle India Pvt. Ltd.</h3>
+        <article class="experience-role">
+            <div class="timeline-meta"><time>Jul 2024 – Oct 2026</time></div>
             <div class="timeline-content">
                 <h3>Application Software Developer 1</h3>
                 <ul class="bullet-list">
@@ -62,10 +88,21 @@ NITK, currently open to software roles."
                 </ul>
             </div>
         </article>
-        <article class="timeline-item">
-            <div class="timeline-meta"><time>Apr 2023 – Apr 2024</time>
-                <p>IRIS, NITK</p>
+        <article class="experience-role">
+            <div class="timeline-meta"><time>May 2023 – Jul 2023</time></div>
+            <div class="timeline-content">
+                <h3>Software Development Intern</h3>
+                <ul class="bullet-list">
+                    <li>Built a React and SuiteScript tool to map transaction flow and flag orphaned nodes in NetSuite's
+                        SCM and revenue-recognition modules.</li>
+                </ul>
             </div>
+        </article>
+        </section>
+        <section class="experience-group" aria-labelledby="iris-title">
+            <h3 id="iris-title">IRIS, NITK</h3>
+        <article class="experience-role">
+            <div class="timeline-meta"><time>Apr 2023 – Apr 2024</time></div>
             <div class="timeline-content">
                 <h3>Admin Lead</h3>
                 <ul class="bullet-list">
@@ -77,22 +114,8 @@ NITK, currently open to software roles."
                 </ul>
             </div>
         </article>
-        <article class="timeline-item">
-            <div class="timeline-meta"><time>May 2023 – Jul 2023</time>
-                <p>Oracle India Pvt. Ltd.</p>
-            </div>
-            <div class="timeline-content">
-                <h3>Software Development Intern</h3>
-                <ul class="bullet-list">
-                    <li>Built a React and SuiteScript tool to map transaction flow and flag orphaned nodes in NetSuite's
-                        SCM and revenue-recognition modules.</li>
-                </ul>
-            </div>
-        </article>
-        <article class="timeline-item">
-            <div class="timeline-meta"><time>Aug 2022 – Apr 2023</time>
-                <p>IRIS, NITK</p>
-            </div>
+        <article class="experience-role">
+            <div class="timeline-meta"><time>Aug 2022 – Apr 2023</time></div>
             <div class="timeline-content">
                 <h3>Product Manager</h3>
                 <ul class="bullet-list">
@@ -115,50 +138,19 @@ NITK, currently open to software roles."
                 </ul>
             </div>
         </article>
+        </section>
     </div>
 </section>
 
 <section class="section shell" id="education" aria-labelledby="education-title">
-    <div class="section-label"><span>03</span>
-        <h2 id="education-title">Education</h2>
-    </div>
+    <div class="section-label"><span>04</span><h2 id="education-title">Education</h2></div>
     <div class="section-body timeline">
         <article class="timeline-item">
-            <div class="timeline-meta"><time>2020 – 2024</time>
-                <p>Surathkal, India</p>
-            </div>
-            <div class="timeline-content">
-                <h3>National Institute of Technology Karnataka</h3>
+            <div class="timeline-meta"><time>2020 &ndash; 2024</time><p>Surathkal, India</p></div>
+            <div class="timeline-content"><h3>National Institute of Technology Karnataka</h3>
                 <p>B.Tech. in Electronics and Communication Engineering, with a minor in Management. CGPA: 8.23.</p>
             </div>
         </article>
-    </div>
-</section>
-
-<section class="section shell" id="work" aria-labelledby="work-title">
-    <div class="section-label"><span>04</span>
-        <h2 id="work-title">Selected Work</h2>
-    </div>
-    <div class="section-body work-grid">
-        {% assign featured_projects = site.projects | where: "featured", true | sort: "order" %}
-        {% for project in featured_projects %}
-        <article class="work-card">
-            {% if project.image %}
-            <a href="{{ project.url | relative_url }}">
-                <img class="showcase-thumbnail" src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title | escape }}" width="280" height="186" style="width: min(100%, 280px); height: auto;" loading="lazy" />
-            </a>
-            {% endif %}
-            <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
-            {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
-        </article>
-        {% else %}
-        <article class="work-card work-card-empty">
-            <p class="eyebrow">Still writing</p>
-            <h3>Showcase projects are coming soon.</h3>
-            <p>In the meantime, you can view the rest of them on <a href="https://github.com/danishjuneja"
-                    target="_blank" rel="noreferrer">GitHub <span aria-hidden="true">↗</span></a>.</p>
-        </article>
-        {% endfor %}
     </div>
 </section>
 
@@ -172,16 +164,16 @@ NITK, currently open to software roles."
             <p>Java / C++ / Python / JavaScript / TypeScript / C / SQL / PL/SQL / Go</p>
         </div>
         <div>
-            <h3>Backend &amp; Data</h3>
-            <p>REST APIs / PostgreSQL / MySQL / Oracle Database / Elasticsearch / Docker / Kubernetes</p>
+            <h3>Frameworks &amp; Backend</h3>
+            <p>Ruby on Rails / Node.js / React / REST APIs / PostgreSQL / MySQL / Oracle Database / Elasticsearch</p>
         </div>
         <div>
             <h3>Testing &amp; Automation</h3>
-            <p>Playwright / JUnit / Mockito</p>
+            <p>Playwright / JUnit / Mockito / Git / GitHub / CI/CD / Docker / Kubernetes / AWS</p>
         </div>
         <div>
             <h3>AI &amp; ML</h3>
-            <p>TensorFlow / LLM Agents / LLM Evaluation</p>
+            <p>LangChain / TensorFlow / LLM Agents / LLM Evaluation / Prompt Engineering</p>
         </div>
     </div>
 </section>
