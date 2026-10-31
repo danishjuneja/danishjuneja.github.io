@@ -347,28 +347,11 @@ h1 {
 }
 
 .showcase-thumbnail {
-  margin-bottom: 20px;
-}
-
-.showcase-thumbnail img {
   display: block;
   width: 100%;
+  max-width: 280px;
   height: auto;
-}
-
-/* Show only the 900 x 600 battle area within the 965 x 832 screenshot. */
-.showcase-thumbnail--battle {
-  position: relative;
-  aspect-ratio: 3 / 2;
-  overflow: hidden;
-}
-
-.showcase-thumbnail--battle img {
-  position: absolute;
-  width: 107.222222%;
-  max-width: none;
-  top: -22.666667%;
-  left: -5%;
+  margin-bottom: 20px;
 }
 
 .listing-grid {

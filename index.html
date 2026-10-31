@@ -145,9 +145,7 @@ NITK, currently open to software roles."
         <article class="work-card">
             {% if project.image %}
             <a href="{{ project.url | relative_url }}">
-                <div class="showcase-thumbnail{% if project.showcase_crop == 'battle' %} showcase-thumbnail--battle{% endif %}">
-                    <img src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title | escape }}" loading="lazy" />
-                </div>
+                <img class="showcase-thumbnail" src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title | escape }}" width="280" height="186" style="width: min(100%, 280px); height: auto;" loading="lazy" />
             </a>
             {% endif %}
             <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
