@@ -2,6 +2,11 @@
 title: "I built a daily Pokémon game for a few friends. Then 50,000 people showed up."
 description: "How Daily Red grew beyond a few Twitter visitors, and how I cut its downloads and rebuilt its delivery pipeline."
 date: 2026-10-31 12:00:00 +0530
+summary: "How Daily Red grew beyond a few Twitter visitors, and how I cut its downloads and rebuilt its delivery pipeline."
+technologies: [WebAssembly, JavaScript, Docker, GitHub Actions, Vercel]
+github: "https://github.com/danishjuneja/dailyred-improved"
+featured: true
+order: 1
 tags: [pokemon, webassembly, performance, side-projects]
 image: /assets/posts/daily-red/pikachu-haunter.png
 image_alt: "Haunter facing Pikachu in a Daily Red battle"

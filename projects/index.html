@@ -12,6 +12,7 @@ permalink: /projects/
     {% assign projects = site.projects | sort: "order" %}
     {% for project in projects %}
     <a class="work-card" href="{{ project.url | relative_url }}">
+      {% if project.image %}<img class="post-thumbnail" src="{{ project.image | relative_url }}" alt="{{ project.image_alt | default: project.title | escape }}" loading="lazy" />{% endif %}
       <p class="eyebrow">{% if project.technologies %}{{ project.technologies | join: " / " }}{% else %}Project{% endif %}</p>
       <h2>{{ project.title }}</h2>
       {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
