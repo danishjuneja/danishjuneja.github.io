@@ -129,6 +129,7 @@ a {
 h1,
 h2,
 h3,
+h4,
 p {
   margin-top: 0;
 }
@@ -254,6 +255,7 @@ h1 {
 }
 
 .timeline-content h3,
+.timeline-content h4,
 .work-card h3 {
   margin-bottom: 8px;
   font-size: 17px;
@@ -539,19 +541,18 @@ h1 {
   .work-grid { grid-auto-columns: min(82vw, 320px); }
 }
 
-/* Group roles by organization, with the full descriptions beneath each heading. */
-.experience-groups {
-  display: grid;
-  gap: 40px;
-}
-
-.experience-group > h3 {
-  margin: 0 0 20px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--line);
-  font-size: 20px;
-  letter-spacing: -0.03em;
-}
-
+/* Organization details remain available without JavaScript. */
+.hero-about { margin-top: 32px; scroll-margin-top: 90px; }
+.hero { align-items: start; }
+.experience-groups { border-top: 1px solid var(--line); }
+.experience-group { border-bottom: 1px solid var(--line); }
+.experience-group summary { display: flex; align-items: center; gap: 14px; padding: 18px 0; cursor: pointer; list-style: none; }
+.experience-group summary::-webkit-details-marker { display: none; }
+.experience-group summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.experience-group summary h3 { margin: 0; font-size: 18px; letter-spacing: -0.02em; }
+.company-icon { width: 32px; height: 32px; flex: 0 0 32px; object-fit: contain; }
+.accordion-indicator { margin-left: auto; width: 10px; height: 10px; border-right: 1.5px solid var(--accent); border-bottom: 1.5px solid var(--accent); transform: rotate(45deg) translateY(-3px); }
+.experience-group[open] .accordion-indicator { transform: rotate(225deg) translate(-2px, -2px); }
+.experience-details { padding: 4px 0 24px; }
 .experience-role + .experience-role { margin-top: 30px; }
 .experience-role .timeline-meta { margin-bottom: 4px; }

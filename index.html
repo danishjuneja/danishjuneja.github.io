@@ -12,22 +12,16 @@ NITK, currently open to software roles."
         <div class="hero-links" aria-label="Profile links"><a href="mailto:danishjuneja11@gmail.com">Email</a><a
                 href="https://github.com/danishjuneja" target="_blank" rel="noreferrer">GitHub</a><a
                 href="https://www.linkedin.com/in/danishjuneja" target="_blank" rel="noreferrer">LinkedIn</a></div>
+    <div class="hero-about prose" id="about">
+        <p>Hi, I'm Danish, I used to build software at Oracle NetSuite, now I'm looking for my next role. Most of the times I'm building things because they come in my dreams, even the smallest things like optimising a SQL query.</p>
+        <p>I also write and sing songs. There's usually a song looping in my head, and putting it out into the world is the only reliable way to make room for the next one.</p>
+    </div>
     </div><img class="portrait" src="{{ '/assets/danish-juneja.jpeg' | relative_url }}"
         alt="Danish Juneja smiling at the Global Tech Summit" />
 </section>
 
-<section class="section shell" id="about" aria-labelledby="about-title">
-    <div class="section-label"><span>01</span>
-        <h2 id="about-title">About</h2>
-    </div>
-    <div class="section-body prose">
-        <p>Hi, I'm Danish, I used to build software at Oracle NetSuite, now I'm looking for my next role. Most of the times I'm building things because they come in my dreams, even the smallest things like optimising a SQL query.</p>
-        <p>I also write and sing songs. There's usually a song looping in my head, and putting it out into the world is the only reliable way to make room for the next one.</p>
-    </div>
-</section>
-
 <section class="section shell" id="work" aria-labelledby="work-title">
-    <div class="section-label"><span>02</span>
+    <div class="section-label"><span>01</span>
         <h2 id="work-title">Selected Work</h2>
     </div>
     <div class="section-body">
@@ -57,14 +51,15 @@ NITK, currently open to software roles."
 </section>
 
 <section class="section shell" id="experience" aria-labelledby="experience-title">
-    <div class="section-label"><span>03</span><h2 id="experience-title">Experience</h2></div>
+    <div class="section-label"><span>02</span><h2 id="experience-title">Experience</h2></div>
     <div class="section-body experience-groups">
-        <section class="experience-group" aria-labelledby="oracle-title">
-            <h3 id="oracle-title">Oracle India Pvt. Ltd.</h3>
+        <details class="experience-group">
+            <summary><img class="company-icon" src="{{ '/assets/oracle.svg' | relative_url }}" alt="" width="32" height="32" /><h3>Oracle India Pvt. Ltd.</h3><span class="accordion-indicator" aria-hidden="true"></span></summary>
+            <div class="experience-details">
         <article class="experience-role">
             <div class="timeline-meta"><time>Jul 2024 – Oct 2026</time></div>
             <div class="timeline-content">
-                <h3>Application Software Developer 1</h3>
+                <h4>Application Software Developer 1</h4>
                 <ul class="bullet-list">
                     <li>Designed CFO Insights metadata records and data models, exposed them through REST APIs with
                         role-based
@@ -91,20 +86,22 @@ NITK, currently open to software roles."
         <article class="experience-role">
             <div class="timeline-meta"><time>May 2023 – Jul 2023</time></div>
             <div class="timeline-content">
-                <h3>Software Development Intern</h3>
+                <h4>Software Development Intern</h4>
                 <ul class="bullet-list">
                     <li>Built a React and SuiteScript tool to map transaction flow and flag orphaned nodes in NetSuite's
                         SCM and revenue-recognition modules.</li>
                 </ul>
             </div>
         </article>
-        </section>
-        <section class="experience-group" aria-labelledby="iris-title">
-            <h3 id="iris-title">IRIS, NITK</h3>
+            </div>
+        </details>
+        <details class="experience-group">
+            <summary><img class="company-icon" src="{{ '/assets/iris.svg' | relative_url }}" alt="" width="32" height="32" /><h3>IRIS, NITK</h3><span class="accordion-indicator" aria-hidden="true"></span></summary>
+            <div class="experience-details">
         <article class="experience-role">
             <div class="timeline-meta"><time>Apr 2023 – Apr 2024</time></div>
             <div class="timeline-content">
-                <h3>Admin Lead</h3>
+                <h4>Admin Lead</h4>
                 <ul class="bullet-list">
                     <li>Led 40+ students building NITK's campus ERP. It serves 24K+ users and covers 55+ functions,
                         including course registration, hostel allotment, and mess allocation.</li>
@@ -117,7 +114,7 @@ NITK, currently open to software roles."
         <article class="experience-role">
             <div class="timeline-meta"><time>Aug 2022 – Apr 2023</time></div>
             <div class="timeline-content">
-                <h3>Product Manager</h3>
+                <h4>Product Manager</h4>
                 <ul class="bullet-list">
                     <li>Led the 0 → 1 development of PG Module, to track PhD academic processes, including approval
                         flows, scheduling review meetings, managed external examiner invitations for thesis evaluation
@@ -138,12 +135,13 @@ NITK, currently open to software roles."
                 </ul>
             </div>
         </article>
-        </section>
+            </div>
+        </details>
     </div>
 </section>
 
 <section class="section shell" id="education" aria-labelledby="education-title">
-    <div class="section-label"><span>04</span><h2 id="education-title">Education</h2></div>
+    <div class="section-label"><span>03</span><h2 id="education-title">Education</h2></div>
     <div class="section-body timeline">
         <article class="timeline-item">
             <div class="timeline-meta"><time>2020 &ndash; 2024</time><p>Surathkal, India</p></div>
@@ -155,31 +153,21 @@ NITK, currently open to software roles."
 </section>
 
 <section class="section shell" id="skills" aria-labelledby="skills-title">
-    <div class="section-label"><span>05</span>
+    <div class="section-label"><span>04</span>
         <h2 id="skills-title">Skills</h2>
     </div>
     <div class="section-body skills-list">
-        <div>
-            <h3>Languages</h3>
-            <p>Java / C++ / Python / JavaScript / TypeScript / C / SQL / PL/SQL / Go</p>
-        </div>
-        <div>
-            <h3>Frameworks &amp; Backend</h3>
-            <p>Ruby on Rails / Node.js / React / REST APIs / PostgreSQL / MySQL / Oracle Database / Elasticsearch</p>
-        </div>
-        <div>
-            <h3>Testing &amp; Automation</h3>
-            <p>Playwright / JUnit / Mockito / Git / GitHub / CI/CD / Docker / Kubernetes / AWS</p>
-        </div>
-        <div>
-            <h3>AI &amp; ML</h3>
-            <p>LangChain / TensorFlow / LLM Agents / LLM Evaluation / Prompt Engineering</p>
-        </div>
+        <div><h3>Languages</h3><p>Java / C++ / Python / JavaScript / TypeScript / C / SQL / PL/SQL / Go</p></div>
+        <div><h3>Frameworks &amp; APIs</h3><p>Ruby on Rails / Node.js / React / REST APIs</p></div>
+        <div><h3>Databases</h3><p>PostgreSQL / MySQL / Oracle Database</p></div>
+        <div><h3>Testing</h3><p>Playwright / JUnit / Mockito</p></div>
+        <div><h3>Cloud, DevOps &amp; Tools</h3><p>AWS / Docker / Kubernetes / CI/CD / Git / GitHub</p></div>
+        <div><h3>AI &amp; ML</h3><p>LangChain / TensorFlow / LLM Agents / LLM Evaluation / Prompt Engineering</p></div>
     </div>
 </section>
 
 <section class="section shell" id="music" aria-labelledby="music-title">
-    <div class="section-label"><span>06</span>
+    <div class="section-label"><span>05</span>
         <h2 id="music-title">Music</h2>
     </div>
     <div class="section-body music-block">
