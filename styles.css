@@ -541,18 +541,26 @@ h1 {
   .work-grid { grid-auto-columns: min(82vw, 320px); }
 }
 
-/* Organization details remain available without JavaScript. */
+/* Each role can be expanded independently. */
 .hero-about { margin-top: 32px; scroll-margin-top: 90px; }
 .hero { align-items: start; }
 .experience-groups { border-top: 1px solid var(--line); }
-.experience-group { border-bottom: 1px solid var(--line); }
-.experience-group summary { display: flex; align-items: center; gap: 14px; padding: 18px 0; cursor: pointer; list-style: none; }
-.experience-group summary::-webkit-details-marker { display: none; }
-.experience-group summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.experience-group summary h3 { margin: 0; font-size: 18px; letter-spacing: -0.02em; }
+.experience-group { padding: 24px 0; border-bottom: 1px solid var(--line); }
+.company-heading { display: flex; align-items: center; gap: 14px; margin: 0 0 14px; font-size: 18px; letter-spacing: -0.02em; }
 .company-icon { width: 32px; height: 32px; flex: 0 0 32px; object-fit: contain; }
-.accordion-indicator { margin-left: auto; width: 10px; height: 10px; border-right: 1.5px solid var(--accent); border-bottom: 1.5px solid var(--accent); transform: rotate(45deg) translateY(-3px); }
-.experience-group[open] .accordion-indicator { transform: rotate(225deg) translate(-2px, -2px); }
-.experience-details { padding: 4px 0 24px; }
-.experience-role + .experience-role { margin-top: 30px; }
-.experience-role .timeline-meta { margin-bottom: 4px; }
+.experience-roles { margin-left: 15px; border-left: 1px solid var(--line); }
+.experience-role { position: relative; padding-left: 20px; }
+.experience-role::before { position: absolute; top: 19px; left: -3px; width: 5px; height: 5px; background: var(--accent); content: ""; }
+.experience-role summary { display: flex; align-items: center; gap: 12px; min-height: 44px; cursor: pointer; list-style: none; }
+.experience-role summary::-webkit-details-marker { display: none; }
+.experience-role summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.role-toggle { display: grid; place-items: center; width: 20px; height: 20px; flex: 0 0 20px; border: 1px solid var(--line); color: var(--accent); font-family: "DM Mono", monospace; font-size: 15px; line-height: 1; }
+.role-toggle::before { content: "+"; }
+.experience-role[open] .role-toggle::before { content: "−"; }
+.role-title { color: var(--ink); font-size: 16px; }
+.experience-role time { margin-left: auto; color: var(--muted); font-family: "DM Mono", monospace; font-size: 12px; text-align: right; }
+.role-details { padding: 4px 0 18px 32px; }
+@media (max-width: 520px) {
+  .experience-role summary { flex-wrap: wrap; gap: 4px 12px; padding: 9px 0; }
+  .experience-role time { width: 100%; margin-left: 32px; text-align: left; }
+}
