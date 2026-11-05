@@ -564,3 +564,13 @@ h1 {
   .experience-role summary { flex-wrap: wrap; gap: 4px 12px; padding: 9px 0; }
   .experience-role time { width: 100%; margin-left: 32px; text-align: left; }
 }
+
+.education-details { position: relative; margin-left: 15px; padding-left: 20px; border-left: 1px solid var(--line); }
+.education-details::before { position: absolute; top: 11px; left: -3px; width: 5px; height: 5px; background: var(--accent); content: ""; }
+.education-degree { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+.education-degree h4 { margin: 0; font-size: 16px; font-weight: 500; }
+.education-degree time, .education-fields dt { color: var(--muted); font-family: "DM Mono", monospace; font-size: 12px; }
+.education-fields { display: grid; gap: 6px; margin: 16px 0 0; }
+.education-fields div { display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 10px; }
+.education-fields dd { margin: 0; color: var(--muted); }
+@media (max-width: 520px) { .education-degree { flex-wrap: wrap; gap: 4px 12px; } }
