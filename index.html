@@ -37,6 +37,7 @@ NITK, currently open to software roles."
             {% endif %}
             <h3><a href="{{ project.url | relative_url }}">{{ project.title }}</a></h3>
             {% if project.summary %}<p>{{ project.summary }}</p>{% endif %}
+            {% include project-links.html project=project %}
         </article>
         {% else %}
         <article class="work-card work-card-empty">

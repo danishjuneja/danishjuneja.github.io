@@ -290,7 +290,8 @@ h1 {
   border: 1px solid var(--line);
 }
 
-.work-card p:last-child {
+.work-card p:last-child,
+.work-card > p:not(.eyebrow) {
   margin-bottom: 0;
   color: var(--muted);
 }
@@ -395,6 +396,38 @@ h1 {
 .tag-list span {
   padding: 4px 8px;
   border: 1px solid var(--line);
+}
+
+.project-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 24px;
+  font-family: "DM Mono", monospace;
+  font-size: 11px;
+}
+
+.project-links a {
+  padding: 4px 8px;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  text-decoration: none;
+}
+
+.project-links a:hover,
+.project-links a:focus-visible {
+  color: var(--ink);
+  border-color: var(--accent);
+}
+
+.work-grid .work-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-grid .project-links {
+  margin-top: auto;
+  padding-top: 24px;
 }
 
 .skills-list {

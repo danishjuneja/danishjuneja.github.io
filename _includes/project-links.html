@@ -1,0 +1,7 @@
+{% if include.project.github or include.project.demo or include.project.preview %}
+<div class="project-links" aria-label="Project links">
+  {% if include.project.github %}<a href="{{ include.project.github | escape }}" target="_blank" rel="noopener noreferrer" aria-label="{{ include.project.title | escape }} repository">Repo</a>{% endif %}
+  {% if include.project.demo %}<a href="{{ include.project.demo | escape }}" target="_blank" rel="noopener noreferrer" aria-label="{{ include.project.title | escape }} demo">Demo</a>{% endif %}
+  {% if include.project.preview %}<a href="{{ include.project.preview | escape }}" target="_blank" rel="noopener noreferrer" aria-label="{{ include.project.title | escape }} preview">Preview</a>{% endif %}
+</div>
+{% endif %}
